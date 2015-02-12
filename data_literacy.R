@@ -1,3 +1,5 @@
+setwd("/Users/clay/GitHub/Leada-Data-Literacy/")
+
 #Create dataframe of bike trip data
 bike_rentals <- read.csv("bike_trip_data.csv", header = T)
 
@@ -21,3 +23,11 @@ the_max <- names(which.max(start_table))
 start_table[the_max]
 #Problem 2: What was the most popular day by trip frequency in this dataset?
 #09/25/13
+
+table(bike_rentals$Start.Station)
+
+# so what I want is a for a field that is number of bikes at start station after
+# that bike has been removed. create table where each row is a unique time in chronological
+# order and each column is a bike station. a value of -1 is a bike leaving and a +1 is a
+# bike being returned. create a running total for each column. identify the first row that
+# records a 0. Identify the column that records a 0 in that row
